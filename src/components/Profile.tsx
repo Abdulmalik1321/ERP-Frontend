@@ -14,7 +14,6 @@ import {
   SidebarMenuItem,
 } from "@/shadcn/ui/sidebar";
 import {
-  BadgeCheck,
   Bell,
   ChevronsUpDown,
   LogOut,
@@ -105,6 +104,8 @@ export function Profile() {
                   <Switch
                     checked={theme === "light"}
                     onCheckedChange={() => {
+                      console.log(theme);
+
                       if (theme === "light") {
                         setTheme("dark");
                       }

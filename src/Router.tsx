@@ -5,8 +5,8 @@ import { ThemeProvider } from "./shadcn/theme-provider";
 import { App } from "./App";
 
 import { systemReducer, initialState } from "./reducer/systemReducer";
-
 export const systemContext = createContext<any>(null);
+
 export function Router() {
   const [state, dispatch] = useReducer(systemReducer, initialState);
 
@@ -18,7 +18,7 @@ export function Router() {
   ]);
 
   return (
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <systemContext.Provider value={{ state, dispatch }}>
         <RouterProvider router={router} />
       </systemContext.Provider>

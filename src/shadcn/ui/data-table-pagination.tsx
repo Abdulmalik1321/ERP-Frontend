@@ -34,6 +34,8 @@ export function DataTablePagination<TData>({
           <Select
             value={`{table.getState().pagination.pageSize}`}
             onValueChange={(value) => {
+              console.log(value);
+
               //   table.setPageSize(Number(value));
             }}
           >
@@ -59,7 +61,7 @@ export function DataTablePagination<TData>({
             variant="outline"
             className="hidden h-8 w-8 p-0 lg:flex"
             onClick={() => table.setPageIndex(0)}
-            disabled={!""}
+            disabled={true}
           >
             <span className="sr-only">Go to first page</span>
             <ChevronsLeftIcon className="h-4 w-4" />
@@ -68,7 +70,7 @@ export function DataTablePagination<TData>({
             variant="outline"
             className="h-8 w-8 p-0"
             onClick={() => table.previousPage()}
-            disabled={!""}
+            disabled={true}
           >
             <span className="sr-only">Go to previous page</span>
             <ChevronLeftIcon className="h-4 w-4" />
@@ -77,7 +79,7 @@ export function DataTablePagination<TData>({
             variant="outline"
             className="h-8 w-8 p-0"
             onClick={() => ""}
-            disabled={!""}
+            disabled={true}
           >
             <span className="sr-only">Go to next page</span>
             <ChevronRightIcon className="h-4 w-4" />
@@ -85,8 +87,8 @@ export function DataTablePagination<TData>({
           <Button
             variant="outline"
             className="hidden h-8 w-8 p-0 lg:flex"
-            onClick={() => table.setPageIndex("" - 1)}
-            disabled={!""}
+            onClick={() => table.setPageIndex(1 - 1)}
+            disabled={true}
           >
             <span className="sr-only">Go to last page</span>
             <ChevronsRightIcon className="h-4 w-4" />

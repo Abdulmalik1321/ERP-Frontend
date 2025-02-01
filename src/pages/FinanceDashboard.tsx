@@ -363,7 +363,7 @@ function DataTable() {
   );
 }
 
-function DataCard({
+export function DataCard({
   title,
   amount,
   percentage,
